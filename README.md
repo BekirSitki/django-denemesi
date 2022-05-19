@@ -1,3 +1,2 @@
-#django öğreniyorum
-
-##ilk github yüklemem
+# django öğreniyorum
+ilk github yüklemem
