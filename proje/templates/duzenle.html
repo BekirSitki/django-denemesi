@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duzenle</title>
+</head>
+<body>
+    <h1>Notu Duzenle</h1>
+
+    <form action="notuduzenle/{{ notlar.id }}" method="post">
+    {% csrf_token %}
+    Başlık:<br>
+    <input name="baslik" value="{{ notlar.baslik }}">
+    <br><br>
+    İçerik:<br>
+    <input name="icerik" value="{{ notlar.icerik }}">
+    <br><br>
+    <input type="submit" value="Tamam">
+    </form>
+</body>
+</html>

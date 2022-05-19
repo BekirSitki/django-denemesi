@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+    h4 { background-color: rgba(20, 20, 20, 0.1); width: 400px; border: 3px solid rgba(20, 20, 20, 0.3); border-radius: 20px; padding: 5px; }
+    p { background-color: rgba(20, 20, 20, 0.1); border: 1px solid rgba(20, 20, 20, 0.5) ; border-radius: 10px; padding: 3px;}
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+    a:disabled { text-decoration: none; }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+</head>
+<body>
+    
+    <h1>Notlar</h1>
+    <h3>Silmek istediğiniz notun başlığına tıklamanız yeterli!</h3>
+    <h3>Duzenlemek istediğiniz notun içeriğine tıklamanız yeterli!</h3>
+    <a href="ekle" title="Not Ekle"><h3>Ekle</h3></a>
+    {% for i in notlar %}
+    <!--<tr>-->
+        <a href="sil/{{i.id}}"><h4>{{ i.id }} : {{ i.baslik }}</a></h4>
+        <a href="duzenle/{{i.id}}"><p>{{ i.icerik }}</p></a>
+        
+    <!--<tr>-->
+    {% endfor %}
+
+</body>
+</html>
