@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+
+        form {
+
+            padding: 20px;
+            background-color: rgba(100, 100, 100, 0.1);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        input {
+            width: 300px;
+            height: 25px;
+        }
+
+        button {
+
+            background-color: rgba(100, 100, 100,0.7);
+            border: none;
+            width: 50px;
+            height: 25px;
+            color: white;
+            
+        }
+        button:hover {
+
+            background-color: rgba(100, 100, 100,0.9);
+        }
+
+
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +40,9 @@
 </head>
 <body>
 
-    <h1>Not Ekle</h1>
     <form action="notekle" method="post">
+        <h1>Not Ekle</h1>
+        <hr>
         {% csrf_token %}
         Başlık:  (30 karakter)<br>
         <input name="baslik">
@@ -17,7 +50,8 @@
         İçerik:  (255 karakter)<br>
         <input name="icerik">
         <br><br>
-        <input type="submit" value="Ekle">
+        <button>Ekle</button>
+        <!--  <input type="submit" value="Ekle"> -->
         </form>
 </body>
 </html>

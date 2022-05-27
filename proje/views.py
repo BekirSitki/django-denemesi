@@ -1,6 +1,7 @@
 from re import template
 from django.shortcuts import render
 from matplotlib.style import context
+from more_itertools import first
 from requests import request
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
@@ -15,7 +16,6 @@ def index(request):
     context = { 
         'notlar':notlar,
     }
-
 
     return HttpResponse(template.render(context,request))
 
@@ -33,12 +33,6 @@ def notekle(request):
 def sil(request, id):
     silinecek_not = Notlar.objects.get(id=id)
     silinecek_not.delete()
-    #
-    #for bos_yer in Notlar.objects:
-    #    if bos_yer.id is 1:
-    #
-    #        pass
-    #    pass
     
     return HttpResponseRedirect(reverse('index'))
 

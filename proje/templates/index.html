@@ -4,9 +4,9 @@
 
     h4 { background-color: rgba(20, 20, 20, 0.1); width: 400px; border: 3px solid rgba(20, 20, 20, 0.3); border-radius: 20px; padding: 5px; }
     p { background-color: rgba(20, 20, 20, 0.1); border: 1px solid rgba(20, 20, 20, 0.5) ; border-radius: 10px; padding: 3px;}
-    a:hover { text-decoration: none; }
+    a:hover { text-decoration: none;  }
     a:active { text-decoration: none; }
-    a:disabled { text-decoration: none; }
+    a:visited { text-decoration: none; }
 </style>
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     <a href="ekle" title="Not Ekle"><h3>Ekle</h3></a>
     {% for i in notlar %}
     <!--<tr>-->
-        <a href="sil/{{i.id}}"><h4>{{ i.id }} : {{ i.baslik }}</a></h4>
+        <a href="sil/{{i.id}}">Sil : </a> {{ i.baslik }}
         <a href="duzenle/{{i.id}}"><p>{{ i.icerik }}</p></a>
         
     <!--<tr>-->
