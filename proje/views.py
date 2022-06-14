@@ -26,7 +26,8 @@ def ekle(request):
 def notekle(request):
     eklenecek_baslik = request.POST['baslik']
     eklenecek_icerik = request.POST['icerik']
-    ekle = Notlar(baslik = eklenecek_baslik, icerik = eklenecek_icerik)
+    eklenecek_tarih  = request.POST['tarih']
+    ekle = Notlar(baslik = eklenecek_baslik, icerik = eklenecek_icerik, tarih = eklenecek_tarih)
     ekle.save()
     return HttpResponseRedirect(reverse('index'))
  

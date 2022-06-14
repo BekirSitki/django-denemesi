@@ -56,7 +56,7 @@
         <div class="row my-4 p-4 h-25">
 
             <div class="col-1">
-                <div style="margin-bottom: 25px; margin-top: 5px;">
+                <div style="margin-bottom: 25px; margin-top: 7px;">
 
                     <a href="sil/{{i.id}}"  title="Notu Sil" class="sil">
         
@@ -79,9 +79,14 @@
             </div>
             <div class="col-8">
 
-                <div class="card">
+                <div class="card w-450">
 
-                    <div class="card-header">{{i.baslik}}</div>
+                    <div class="card-header">
+                        
+                        <div class="col" style="font-size: 15px; font-style: italic; text-align: center;">{{i.tarih}}</div>
+                        <div class="col">{{i.baslik}}</div>
+                    
+                    </div>
                     <div class="card-body">
 
                         <p class="card-text">{{i.icerik}}</p>
@@ -94,8 +99,8 @@
 
         </div>
         {% endfor %}
-
+        
 
     </div>
-</body>
+</body>                
 </html>
