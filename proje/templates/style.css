@@ -1,0 +1,31 @@
+.container {
+
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgb(100, 100, 100);
+}
+
+.ekle {
+
+    color: black;
+}
+
+.sil {
+
+    color: red;
+}
+
+a:hover {
+    color: gray;
+}
+
+input {
+    width: 300px;
+}
+
+button {
+
+    border: none;
+    width: 30px;
+    height: 30px;
+}
