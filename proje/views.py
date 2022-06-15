@@ -48,8 +48,10 @@ def duzenle(request, id):
 def notuduzenle(request, id):
     duzenlenecek_baslik = request.POST['baslik']
     duzenlenecek_icerik = request.POST['icerik']
+    duzenlenecek_tarih  = request.POST['tarih']
     duzenle = Notlar.objects.get(id=id)
     duzenle.baslik = duzenlenecek_baslik
     duzenle.icerik = duzenlenecek_icerik
+    duzenle.tarih  = duzenlenecek_tarih
     duzenle.save()
     return HttpResponseRedirect(reverse('index'))
